@@ -8,18 +8,29 @@ import {
   // Code,
   Grid,
   theme,
+  HStack,
+  Heading,
+  Flex,
+  Spacer,
   // HStack,
 } from '@chakra-ui/react';
 import { ColorModeSwitcher } from './ColorModeSwitcher';
 // import { Logo } from './Logo';
 import Body from './body';
 
+
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-            <ColorModeSwitcher justifySelf="flex-end" />
+      <Box  px={'5'}  textAlign="start" fontSize="md">
+        <Grid w= '100%' p={3}>
+        <Flex>
+        <Heading>
+              Cubyts
+            </Heading>
+          <Spacer />
+          <ColorModeSwitcher justifySelf="flex-end" />
+        </Flex>
           <VStack spacing={8}>
             <Body/>
           </VStack>
