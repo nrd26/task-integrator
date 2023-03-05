@@ -15,7 +15,7 @@ function Body() {
     const [tasks, setTasks] = React.useState(null)
 
     useEffect (()=>{
-      axios.get("http://localhost:5000/tasks",  { crossdomain: true }).then(response => {
+      axios.get("http://localhost:5000/users",  { crossdomain: true }).then(response => {
         setTasks(response.data)
         // console.log(response.data)
       });
